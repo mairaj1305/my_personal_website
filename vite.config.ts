@@ -4,7 +4,7 @@ import { fileURLToPath, URL } from 'node:url';
 
 // https://vitejs.dev/config/
 export default defineConfig({
- base: '/my_personal_website/',
+base: process.env.GITHUB_ACTIONS ? '/my_personal_website/' : '/',
   plugins: [react()],
   resolve: {
     alias: {
